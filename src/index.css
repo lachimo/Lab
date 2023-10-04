@@ -1,11 +1,37 @@
+
 * {
-    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-ul {
+html {
+    font-size: 62,5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+ul, 
+li {
     list-style: none;
 }
 
 a {
     text-decoration: none;
+}
+
+p {
+
+    line-height: 1.9;
 }
