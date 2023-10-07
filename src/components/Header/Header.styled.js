@@ -22,11 +22,16 @@ export const StyledToolbar = styled(Toolbar)`
     cursor: pointer;
 }
 
+
 .nav-items a {
         color: white ;
-        font-weight: 200;
-        font-size: 1.0rem;
+        font-weight: 500;
+        font-size: 1.3rem;
         padding: 20px;
+
+        &:hover{
+            color:red;
+        }
     }
  
 

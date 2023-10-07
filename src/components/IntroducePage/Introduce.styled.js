@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import theme from "../Theme/Theme";
+import { Box, Modal } from "@mui/material";
 
-export const DivIntro = styled.div`
+export const DivIntro = styled(Box)`
 
 .intro_inner {
     /* width: auto;
@@ -10,8 +11,8 @@ export const DivIntro = styled.div`
 }
 
 .intro_img {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
 }
 
@@ -30,6 +31,7 @@ export const DivIntro = styled.div`
 .desc {
     margin: 5px 20px 20px 20px;
     font-size: 0.9rem;
+    line-height: 1.9;
     display: -webkit-box;           /* Viết ngắn gọn cho đoạn text, đoạn text sẽ được ghi ra trong khoảng bao nhiêu dòng đó rồi "..." */
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
@@ -58,28 +60,61 @@ export const DivIntro = styled.div`
 
     .play {
         margin-left: 20px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: ${theme.color.second_hover_color} ;
+            color: ${theme.color.third_text};
+        }
         
     }
 
     
     .more {
         margin-left: 10px;
-        background-color: gray;
+        background-color: ${theme.color.second_color};
         color: ${theme.color.primary_text};
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: ${theme.color.primary_hover_color};
+        }
     }
 
 
-    &:hover {
-            .play {
-                /* background-color: #ffffffc2; */
-            }
-
-            .more {
-            background-color: rgb(109 108 108 / 63%);
-        }
-        }
         
 
 }
 
-`;
+`
+
+
+
+export const StyledModal = styled(Modal)`
+  
+
+    .modal__wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 68vw;
+        height: 80vh;
+        background-color: #000;
+        border-radius: 40px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .video {
+            width: 94%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 1px solid #000;
+            overflow: hidden;
+        }
+    }
+
+`
