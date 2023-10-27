@@ -8,11 +8,18 @@ using System.Text.RegularExpressions;
 namespace NUnit
 {
     public class CheckDate
+
     {
+        private bool IsInteger(string input)
+        {
+            int number;
+            return int.TryParse(input, out number);
+        }
         public static void Main(string[] args)
         {
 
         }
+
         public bool CheckDayEmpty(string day)
         {
             return (day == "" || day == null) ? true : false;
@@ -47,6 +54,8 @@ namespace NUnit
             return IsInteger(year) ? true : false;
         }
 
+        //checkdate range từ 1 đến 31
+        //để thêm IsInteger để kiểm tra nếu ko phải số nguyên => false
         public bool CheckDayRange(string day)
         {
             if (!IsInteger(day))
@@ -58,6 +67,7 @@ namespace NUnit
             }else return false;
         }
 
+        //kiểm tra số nguyên month từ 1 đến 12
         public bool CheckMonthRange(string month)
         {
             if (!IsInteger(month))
@@ -69,9 +79,25 @@ namespace NUnit
                 return true;
             }
             else return false;
+            
+        }
+        
+        //kiểm tra số nguyên year từ 1000 đến 3000
+        public bool CheckYearRange(string year)
+        {
+            if (!IsInteger(year))
+            {
+                return false;
+            }
+            else if (int.Parse(year) >= 1000 && int.Parse(year) <= 3000)
+            {
+                return true;
+            }
+            else return false;
         }
 
-        public bool CheckYearRange(string year)
+        //Test
+        public bool CheckYearRange2(string year)
         {
             if (!IsInteger(year))
             {
@@ -107,10 +133,31 @@ namespace NUnit
             else return false;
         }
 
-        private bool IsInteger(string input)
+        //Test
+        public bool CheckDateTime2(string day, string month, string year)
         {
-            int number;
-            return int.TryParse(input, out number);
+            int d, m, y;
+            int max = 31;
+            if (IsInteger(day) && IsInteger(month) && IsInteger(year))
+            {
+                d = int.Parse(day);
+                m = int.Parse(month);
+                y = int.Parse(year);
+                if (m == 4 || m == 6 || m == 9 || m == 11) max = 30;
+                else
+                {
+                    if (m == 2)
+                    {
+                        if (y % 400 == 0 || (y % 4 == 0 && y % 100 != 0)) max = 29;
+                        else max = 28;
+                    }
+                    return d <= max;
+                }
+            else return false;
+            }
+
         }
     }
+
+        
 }

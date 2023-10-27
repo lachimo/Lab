@@ -5,6 +5,7 @@
 import { Box, Typography } from "@mui/material"
 import { NavLink } from "react-router-dom"
 import * as St from './Footer.styled'
+import { Copyright } from "@mui/icons-material"
 
 
 const Footer = () => {
@@ -32,9 +33,11 @@ const Footer = () => {
                 {/* <Box className="member--footer__service"></Box> */}
             
                 <Box className="member--footer__copyright">
-                    <Typography>
-                        © 2003-2023 Anime, Inc.
+                    <Typography className="desc__copyright">
+                        Copyright
                     </Typography>
+                    <Copyright style={{margin:"0 4px", width:"15px"}}/>
+                    <Typography className="desc__copyright">2023 Anime</Typography>
                 </Box>
            </Box>
         </Box>

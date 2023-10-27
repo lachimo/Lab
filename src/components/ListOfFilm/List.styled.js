@@ -8,8 +8,9 @@ export const DivList = styled.div`
 
     .list_title {
             color: white;
-            font-size: 1.0rem;
-            font-weight: 500;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-family: Roboto Salab;
             margin-left: 50px;
         }
 

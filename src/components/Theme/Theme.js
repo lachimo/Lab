@@ -15,7 +15,7 @@ const theme = {
         
     },
     font: {
-       
+       main_font: "Roboto Slab",
     }
 }
 

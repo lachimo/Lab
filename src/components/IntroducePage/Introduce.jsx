@@ -60,12 +60,12 @@ const Intro = () => {
                 <Box className='buttons'>
                     <button className='play' onClick={handlePlay} >
                         <PlayArrow style={{marginRight:'5px'}}/>
-                        <Typography>Play</Typography>
+                        <Typography style={{fontFamily:"Fira Sans"}}>Play</Typography>
                     </button>
 
                     <button className='more'>
                         <InfoOutlined style={{marginRight:'5px'}}/>
-                        <Typography>More Infor</Typography>
+                        <Typography style={{fontFamily:"Fira Sans"}}>More Infor</Typography>
                     </button>
                 </Box>
 
