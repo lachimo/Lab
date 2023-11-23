@@ -11,4 +11,5 @@
   * mockapi.io
 ### Author: Pham Thi Ngoc Anh
 ### Contact: lachimolalasii1410@gmail.com
-#### *Because this project is the first project I did when I learned frontend, it has a lot of errors. Hopefully, when you see my project if you want give comments or point out my mistake. Please tell me and I will listen and correct them. Thanks for your interest.*
+
+*Because this project is the first project I did when I learned frontend, it has a lot of errors. Hopefully, when you see my project if you want give comments or point out my mistake. Please tell me and I will listen and correct them. Thanks for your interest.*
