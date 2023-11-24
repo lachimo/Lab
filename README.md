@@ -1,4 +1,4 @@
-# NANE
+# NANA
 ## *A website about watching and searching for anime and movies that you like.*
 ### Way to installation and setting:
   * git clone *link web in my GitHub*
